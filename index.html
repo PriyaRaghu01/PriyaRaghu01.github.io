@@ -6,14 +6,14 @@
     <title>Priyadharsini R - Data Science Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* --- CSS Styles Start Here (Black & White Theme) --- */
+        /* --- CSS Styles Start Here (Inverse Black & White Theme) --- */
         :root {
-            /* Primary color palette: Black and White */
-            --primary-color: #000000; /* Black for text and accents */
-            --secondary-color: #333333; /* Dark Gray for secondary text */
-            --background-color: #FFFFFF; /* Pure White background */
-            --light-bg-color: #F8F8F8; /* Light Gray for sections/cards */
-            --highlight-color: #CCCCCC; /* Gray for subtle highlights/borders */
+            /* Inverse Primary color palette: Black Background, White Text */
+            --primary-color: #FFFFFF; /* White for text and accents */
+            --secondary-color: #AAAAAA; /* Light Gray for subtle text */
+            --background-color: #000000; /* Pure Black background */
+            --card-bg-color: #111111; /* Very Dark Gray for cards */
+            --highlight-color: #555555; /* Medium Gray for borders/subtle accents */
             --font-main: 'Montserrat', sans-serif;
             --font-code: 'Roboto Mono', monospace;
             --border-radius: 4px;
@@ -30,7 +30,7 @@
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
@@ -47,7 +47,8 @@
             font-size: 3.5em;
             margin: 0;
             font-weight: 700;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
         }
 
         header p {
@@ -66,20 +67,29 @@
             margin-bottom: 40px;
             text-transform: uppercase;
             letter-spacing: 1px;
+            color: var(--primary-color);
         }
 
         /* --- Profile/Contact Card --- */
         .profile-card {
-            background-color: var(--light-bg-color);
+            background-color: var(--card-bg-color);
             padding: 30px;
             border-radius: var(--border-radius);
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
             margin-bottom: 50px;
             text-align: center;
+            border: 1px solid var(--highlight-color);
+        }
+
+        .profile-card h2 {
+            font-size: 1.8em;
+            margin-top: 0;
+            border-bottom: 2px solid var(--highlight-color);
+            padding-bottom: 10px;
         }
 
         .profile-card p {
-            max-width: 800px;
+            max-width: 900px;
             margin: 15px auto 30px auto;
             font-size: 1.1em;
             color: var(--secondary-color);
@@ -94,42 +104,52 @@
             letter-spacing: 0.5px;
             padding: 5px 0;
             border-bottom: 2px solid transparent;
-            transition: border-bottom 0.3s;
+            transition: border-bottom 0.3s, color 0.3s;
         }
 
         .contact-links a:hover {
-            border-bottom: 2px solid var(--primary-color);
+            color: var(--secondary-color);
+            border-bottom: 2px solid var(--secondary-color);
         }
 
-        /* --- Projects Grid: Eye-Catching UI --- */
+        /* --- Projects Grid: 3-column Layout --- */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
             padding: 20px 0;
+        }
+        
+        /* Ensure 3 columns on large screens for a wider container */
+        @media (min-width: 1200px) {
+            .projects-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
 
         .project-card {
-            background-color: var(--background-color);
-            padding: 30px;
+            background-color: var(--card-bg-color);
+            padding: 25px;
             border-radius: var(--border-radius);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+            transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
             border: 1px solid var(--highlight-color);
         }
 
         .project-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 30px rgba(255, 255, 255, 0.25);
+            background-color: #222222; /* Slightly lighter gray on hover */
         }
 
         .project-card h3 {
-            font-size: 1.6em;
+            font-size: 1.5em;
             font-weight: 700;
             margin-top: 0;
             padding-bottom: 10px;
-            border-bottom: 2px solid var(--highlight-color);
+            border-bottom: 1px solid var(--highlight-color);
             margin-bottom: 15px;
+            color: var(--primary-color);
         }
 
         .project-card p {
@@ -145,7 +165,7 @@
             display: block;
             margin-top: 20px;
             padding: 8px;
-            background-color: var(--light-bg-color);
+            background-color: var(--highlight-color);
             border-radius: var(--border-radius);
         }
 
@@ -183,15 +203,15 @@
     <header>
         <div class="container">
             <h1>PRIYADHARSINI R</h1>
-            <p>M.Tech Data Science Graduate | Leveraging Analytics for Sustainable Impact</p>
+            <p>M.Tech Data Science Graduate | Leveraging Deep Learning for Actionable Insights</p>
         </div>
     </header>
 
     <div class="container">
         <div class="profile-card">
-            <h2 style="margin-top: 0;">PROFESSIONAL SUMMARY</h2>
+            <h2>PROFESSIONAL SUMMARY</h2>
             <p>
-                [cite_start]A **data-driven problem solver** and adept data science professional focused on leveraging **advanced analytics** for sustainable living and actionable solutions[cite: 30]. [cite_start]Experienced in **Machine Learning**, **Deep Learning (CNNs, GhostNet, DKDC)**, **Natural Language Processing (NLP)**, and **Computer Vision (CV)**[cite: 10, 12, 13]. [cite_start]Proficient in Python, C, SQL, and skilled in communication, training, and leadership[cite: 8, 31, 22].
+                A **data-driven problem solver** and adept data science graduate committed to leveraging advanced analytics for sustainable solutions[cite: 30]. My expertise spans **Deep Learning (CNNs, GhostNet, DKDC)**, **Computer Vision (CV)**, and **Natural Language Processing (NLP)**[cite: 10, 13]. Proficient in Python, C, SQL, and skilled in communication, training (Trained 200+ individuals) [cite: 8, 17], and leadership (President, Rotaract Club)[cite: 23]. I focus on transforming complex data into insightful, actionable strategies[cite: 31].
             </p>
             <div class="contact-links">
                 <a href="mailto:priyaraghu182001@gmail.com">EMAIL</a>
@@ -201,28 +221,35 @@
             </div>
         </div>
 
-        <h2 class="section-title">PROJECT PORTFOLIO</h2>
+        <h2 class="section-title">FEATURED DATA SCIENCE PROJECTS</h2>
         <section class="projects-grid">
 
             <div class="project-card">
-                <h3>Breast Cancer Classification</h3>
-                [cite_start]<p>Developed a robust **Convolutional Neural Network (CNN)** model to classify breast cancer from histopathological images[cite: 34]. [cite_start]The solution automates **early-stage malignant/benign detection**, improving diagnostic efficiency in medical imaging[cite: 34].</p>
+                <h3>CNN-Based Breast Cancer Classification</h3>
+                <p>Developed a high-accuracy **CNN model** using **TensorFlow/Keras** for automated classification of breast cancer from histopathological images[cite: 34]. This project focused on early detection by differentiating between malignant and benign cases with high reliability[cite: 34].</p>
                 <span class="tech-stack">Tech Stack: Python, CNN, TensorFlow/Keras, NumPy, Matplotlib</span>
-                <a href="#" target="_blank" class="project-link">View Project Details</a>
+                <a href="#" target="_blank" class="project-link">View Repository</a>
             </div>
 
             <div class="project-card">
-                <h3>Multimodal Video Summarization</h3>
-                [cite_start]<p>Engineered a multi-stage pipeline for summarizing highway incident videos[cite: 36]. [cite_start]The system uses **ViT-GPT2** for frame caption generation and **BART** for subsequent summarization, delivering concise textual incident reports[cite: 36, 37].</p>
+                <h3>Multimodal Video Incident Summarization</h3>
+                <p>Designed a multi-stage pipeline utilizing computer vision and NLP. The solution employs **ViT-GPT2** to caption key video frames and **BART** for subsequent summarization, enabling rapid creation of concise textual reports for highway incidents[cite: 36].</p>
                 <span class="tech-stack">Tech Stack: Python, ViT-GPT2, BART, Hugging Face, ROUGE</span>
-                <a href="#" target="_blank" class="project-link">View Project Details</a>
+                <a href="#" target="_blank" class="project-link">View Repository</a>
             </div>
 
             <div class="project-card">
-                <h3>Lightweight Lung Cancer Classifier (In Progress)</h3>
-                [cite_start]<p>Designing an optimized deep learning model using **GhostNet features** and **DKDC** for real-time classification[cite: 39]. [cite_start]The project is tailored for deployment on **Jetson Nano**, enabling high-performance remote diagnostics in resource-constrained environments[cite: 39].</p>
+                <h3>Edge-Optimized Lung Cancer Classification (WIP)</h3>
+                <p>Creating a lightweight deep learning model using **GhostNet features** and **DKDC** optimized for low-power computing[cite: 39]. The goal is real-time deployment on **Jetson Nano** to facilitate high-performance remote diagnostics and resource-limited screening[cite: 39].</p>
                 <span class="tech-stack">Tech Stack: Python, GhostNet, DKDC, PyTorch, Jetson Nano</span>
-                <a href="#" target="_blank" class="project-link">View Project Details</a>
+                <a href="#" target="_blank" class="project-link">View Repository</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Basic Banking System (The Sparks Foundation)</h3>
+                <p>Developed a secure web application as an intern, enabling seamless **money transfers** between users and maintaining a transparent **transaction history**[cite: 43]. This project showcases full-stack web development and database management skills[cite: 44].</p>
+                <span class="tech-stack">Tech Stack: HTML, CSS, Bootstrap, JavaScript, PHP, MySQL</span>
+                <a href="#" target="_blank" class="project-link">View Repository</a>
             </div>
 
         </section>
