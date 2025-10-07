@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priyadharsini R - Data Science Portfolio</title>
+    <style>
+        /* --- CSS Styles Start Here --- */
+        :root {
+            --primary-color: #0077b6; /* A shade of blue */
+            --secondary-color: #00b4d8;
+            --background-color: #f8f9fa; /* Light gray/off-white */
+            --text-color: #212529; /* Dark gray */
+            --light-text-color: #6c757d;
+            --border-radius: 8px;
+            --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            font-family: var--font-family;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0 20px 0;
+            background-color: white;
+            border-bottom: 2px solid var(--secondary-color);
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        header h1 {
+            color: var(--primary-color);
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: var(--light-text-color);
+            margin-top: 5px;
+        }
+
+        /* --- Sections --- */
+        .section-title {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        /* --- Profile/Contact Card --- */
+        .profile-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .profile-card .contact-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+
+        .profile-card .contact-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* --- Project Cards --- */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background-color: white;
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-card h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        .project-card .tech-stack {
+            font-weight: bold;
+            color: var(--light-text-color);
+            font-size: 0.9em;
+            display: block;
+            margin-top: 10px;
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+            border-top: 1px solid #ddd;
+            color: var(--light-text-color);
+            font-size: 0.9em;
+        }
+        /* --- CSS Styles End Here --- */
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>PRIYADHARSINI R</h1>
+            <p>M.TECH DATA SCIENCE | Data-Driven Problem Solver</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="profile-card">
+            <h2 class="section-title">Profile Summary & Contact</h2>
+            <p>A data-driven problem solver and an adept learning data science graduate passionate about leveraging analytics for sustainable living. Skilled in communication and public speaking, with a strong foundation in **Python**, **Machine Learning**, **Deep Learning** (CNNs, GhostNet), **NLP**, and tools like **PyTorch** and **TensorFlow/Keras**.</p>
+            <div class="contact-links">
+                <a href="mailto:priyaraghu182001@gmail.com">Email</a>
+                <a href="https://linkedin.com/in/your-linkedin-link" target="_blank">LinkedIn</a>
+                <a href="https://github.com/your-github-link" target="_blank">GitHub</a>
+                <a href="tel:+918754110760">Phone</a>
+            </div>
+        </div>
+
+        <h2 class="section-title">Featured Projects</h2>
+        <section class="projects-grid">
+
+            <div class="project-card">
+                <h3>Breast Cancer Classification</h3>
+                <p>Built a **CNN-based model** to classify breast cancer from histopathological images, focusing on **early detection** and automating the identification of malignant and benign cases. *A strong example of Computer Vision in healthcare.*</p>
+                <span class="tech-stack">Tech Stack: Python, CNN, TensorFlow/Keras, NumPy, Matplotlib</span>
+                <p><a href="#" target="_blank" style="color: var(--secondary-color); font-weight: bold;">View on GitHub »</a></p>
+            </div>
+
+            <div class="project-card">
+                <h3>Video Summarization using NLP</h3>
+                <p>Developed a multistage pipeline for summarizing highway incident videos by extracting frames, generating captions with **ViT-GPT2**, and summarizing with **BART** for concise textual output. *Showcases expertise in multimodal data and NLP.*</p>
+                <span class="tech-stack">Tech Stack: Python, ViT-GPT2, BART, Hugging Face Transformers, Google Colab</span>
+                <p><a href="#" target="_blank" style="color: var(--secondary-color); font-weight: bold;">View on GitHub »</a></p>
+            </div>
+
+            <div class="project-card">
+                <h3>Lung Cancer Classification (In Progress)</h3>
+                <p>Designing a lightweight classifier using **GhostNet features** and **Dynamic Kernel Depthwise Convolution (DKDC)**, optimized for real-time deployment on **Jetson Nano** for low-power, high-performance remote diagnostics. *Highlights model optimization for edge computing.*</p>
+                <span class="tech-stack">Tech Stack: Python, GhostNet, DKDC, PyTorch, Jetson Nano</span>
+                <p><a href="#" target="_blank" style="color: var(--secondary-color); font-weight: bold;">View on GitHub »</a></p>
+            </div>
+
+            <div class="project-card">
+                <h3>Basic Banking System (Internship)</h3>
+                <p>Developed a full-stack web application during an internship, facilitating secure **money transfers** between users and maintaining a **transaction history**. *Demonstrates web development and database skills.*</p>
+                <span class="tech-stack">Tech Stack: HTML, CSS, Bootstrap, JavaScript, PHP, MySQL</span>
+                <p><a href="#" target="_blank" style="color: var(--secondary-color); font-weight: bold;">View on GitHub »</a></p>
+            </div>
+
+        </section>
+
+        </div>
+
+    <footer>
+        <p>&copy; 2025 Priyadharsini R. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
